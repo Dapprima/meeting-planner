@@ -1,0 +1,93 @@
+@import "../UIKit/index.scss";
+
+$plannedColor: #d3f5b4;
+
+/* Control */
+.control-wrapper {
+  margin-bottom: $margin;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  #filter {
+    margin-right: $margin;
+  }
+  .control {
+    display: flex;
+    align-items: center;
+    height: $height;
+  }
+}
+
+/* Table */
+.table-wrapper {
+  width: 100%;
+  #table {
+    width: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+    th,
+    td {
+      border: $border;
+      padding: $padding/2;
+      text-align: center;
+      p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      span {
+        cursor: pointer;
+        margin-left: $margin/2;
+      }
+      &.planned {
+        background-color: $plannedColor;
+        div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+    th {
+      background-color: $gray;
+    }
+  }
+}
+
+/* Modal */
+.modal-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modal {
+    background-color: $gray;
+    min-width: 200px;
+    max-width: 400px;
+    width: auto;
+    min-height: 150px;
+    height: auto;
+    padding: $padding;
+    border-radius: $borderRadius;
+    border: 1px solid $black;
+    .modal-text {
+      text-align: center;
+      margin-bottom: $margin;
+    }
+    .modal-control {
+      display: flex;
+      width: 100%;
+      .modal-btn {
+        width: 100%;
+        margin-right: $margin;
+        background-color: $white !important;
+        border: 1px solid $black;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../UIKit/index.scss";
+
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Form */
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  .group {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $margin * 2;
+    height: $height;
+
+    & > :last-child {
+      width: 60%;
+    }
+  }
+
+  .btn-wrapper {
+    width: 50%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-between;
+    align-items: flex-end;
+    .btn {
+      width: 100%;
+      &:first-child {
+        margin-right: $margin;
+      }
+    }
+  }
+}
+
+/* Alert*/
+.alert-wrapper {
+  position: fixed;
+  width: 100%;
+  background-color: $alertBackground;
+  color: $alertText;
+  visibility: hidden;
+  .alert {
+    width: 100%;
+    .alert-text {
+      color: $alertText;
+    }
+    span {
+      color: $alertText;
+      font-size: $fontSize * 1.5;
+      cursor: pointer;
+    }
+  }
+}
