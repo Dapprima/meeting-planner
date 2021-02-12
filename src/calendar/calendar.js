@@ -8,7 +8,7 @@ const renderTableCell = (data, day, time, filter) => {
   return render ? `<td class="planned">
         <div>
             <p>${data.name}</p>
-            <span data-day='${day}' data-time='${time}' data-filter='${filter}'>&times;</span>
+            <span data-day='${day}' data-time='${time}' data-filter='${filter}' data-name='${data.name}'>&times;</span>
         </div>
     </td>`
     : '<td></td>';
@@ -64,6 +64,7 @@ const closeModal = () => {
 const deleteModal = (e) => {
   if (e.target.dataset.day) {
     const modal = document.querySelector('.modal-wrapper');
+    document.querySelector('.modal-text').textContent = `Are you sure you want to delete "${e.target.dataset.name}" event?`;
     modal.classList.add('visible');
     modal.addEventListener('click', (event) => {
       const { btn } = event.target.dataset;
