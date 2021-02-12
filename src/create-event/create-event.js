@@ -25,7 +25,7 @@ const submitHandler = (e) => {
   else {
     data[day][time] = { participents: participents.split(', '), name };
     localStorage.save('calendar', data);
-    window.location.href = '../';
+    window.location.href = './';
   }
 };
 
