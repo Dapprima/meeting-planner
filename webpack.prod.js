@@ -10,7 +10,7 @@ const buildPath = path.resolve(__dirname, 'dist');
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    calendar: './calendar/calendar.js',
+    index: './calendar/calendar.js',
     'create-event': './create-event/create-event.js',
   },
   output: {
@@ -33,10 +33,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      filename: 'calendar.html',
+      filename: 'index.html',
       template: './calendar/calendar.html',
       inject: 'body',
-      chunks: ['calendar'],
+      chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
       filename: 'create-event.html',

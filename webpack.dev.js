@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    calendar: './calendar/calendar.js',
+    index: './calendar/calendar.js',
     'create-event': './create-event/create-event.js',
   },
   module: {
@@ -22,10 +22,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'calendar.html',
+      filename: 'index.html',
       template: './calendar/calendar.html',
       inject: 'body',
-      chunks: ['calendar'],
+      chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
       filename: 'create-event.html',
