@@ -1,7 +1,7 @@
 export default {
   Mon: {
     '10:00': { participents: ['John Doe'], name: 'Meating' },
-    '12:00': { participents: ['Mikel Malone, John Doe'], name: 'Interview' },
+    '12:00': { participents: ['Mikel Malone', 'John Doe'], name: 'Interview' },
   },
   Tue: {
     '13:00': { participents: ['John Doe'], name: 'Meating' },
@@ -16,7 +16,7 @@ export default {
     '12:00': { participents: ['Mikel Malone', 'John Doe'], name: 'Interview' },
   },
   Fri: {
-    '19:00': { participents: ['John Doe'], name: 'Meating' },
+    '18:00': { participents: ['John Doe'], name: 'Meating' },
     '12:00': { participents: ['Mikel Malone', 'Mary Doe'], name: 'Interview' },
   },
 };
