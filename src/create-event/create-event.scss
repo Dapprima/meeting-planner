@@ -14,6 +14,7 @@
   width: 100%;
   height: 100%;
   .group {
+    position: relative;
     width: 50vw;
     display: flex;
     align-items: center;
@@ -23,6 +24,47 @@
 
     & > :last-child {
       width: 60%;
+    }
+    .input-container{
+      position: relative;
+      width: 60%;
+      .input{
+        width: 100%;
+      }
+      .arrow {
+        position: absolute;
+        top: $height/2-2;
+        right: 7px;
+        border: solid $black;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 2.5px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        cursor: pointer;
+      }
+    }
+   
+    #participents{
+      position: absolute;
+      top: $height;
+      right: 0;
+      list-style: none;
+      width: 60%;
+      border: 1px solid $dark;
+      z-index: 10;
+      background-color: $white;
+      visibility: hidden;
+      li{
+        cursor: pointer;
+        padding: $padding/4;
+        &:hover{
+          background-color: $blue;
+        }
+        &.selected{
+          background-color: $blue;
+        }
+      }
     }
   }
 
