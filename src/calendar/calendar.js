@@ -1,6 +1,5 @@
 import './calendar.scss';
 import localStorage from '../utils/localStorage';
-import TEST_DATA from '../helpers/testData';
 
 const renderTableCell = (data, day, time, filter) => {
   const render = filter !== 'all'
@@ -40,7 +39,7 @@ const renderTableRow = (data, index, filter) => {
 
 const drawCalendar = (filter = 'all') => {
   const calendar = document.querySelector('#table');
-  const data = localStorage.load('calendar') || TEST_DATA;
+  const data = localStorage.load();
   calendar.innerHTML = '';
   const content = Array(9)
     .fill(0)
@@ -50,12 +49,17 @@ const drawCalendar = (filter = 'all') => {
 
 const deleteEvent = (e) => {
   if (e.target.dataset.day) {
-    const result = localStorage.load('calendar') || TEST_DATA;
+    const result = localStorage.load();
     const { day, time, filter } = e.target.dataset;
     delete result[day][time];
     localStorage.save('calendar', result);
     drawCalendar(filter);
   }
+};
+
+const closeModal = () => {
+  const modal = document.querySelector('.modal-wrapper');
+  modal.classList.remove('visible');
 };
 const deleteModal = (e) => {
   if (e.target.dataset.day) {
@@ -63,9 +67,9 @@ const deleteModal = (e) => {
     modal.classList.add('visible');
     modal.addEventListener('click', (event) => {
       const { btn } = event.target.dataset;
-      if (btn === 'close') modal.classList.remove('visible');
+      if (btn === 'close') closeModal();
       if (btn === 'delete') {
-        modal.classList.remove('visible');
+        closeModal();
         deleteEvent(e);
       }
     });
