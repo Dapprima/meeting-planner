@@ -23,7 +23,7 @@ const submitHandler = (e) => {
   const data = localStorage.load();
   if (data[day][time]) showAlert();
   else {
-    data[day][time] = { participents: participents.split(','), name };
+    data[day][time] = { participents: participents.split(', '), name };
     localStorage.save('calendar', data);
     window.location.href = '../calendar.html';
   }
