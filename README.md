@@ -17,7 +17,7 @@ Your app is ready to be deployed!
 Builds the app for production to the build folder and run in `http://localhost:8080`.
 
 ### npm run deploy
-Builds the app for production to the build folder and deploy to Github pages.
+Builds the app for production to the build folder and deploy to GitHub pages.
 
 ## Deploy config:
 Create repository and edit field in `package.json`:
