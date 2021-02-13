@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/Dapprima/meeting-planner/",
+  "homepage": "https://github.com/profile-name/repository-name/",
   "devDependencies": {
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
@@ -34,9 +34,7 @@
     "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^3.11.2",
     "gh-pages": "^3.1.0"
-  }
+  },
 }
